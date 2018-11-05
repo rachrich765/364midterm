@@ -1,0 +1,16 @@
+{%block content%}{% endblock %}
+
+
+<p>------------</p>
+<h3>Navigation</h3>
+	<li><a href="{{ url_for('home')}}">Go input your data to the database (this is the homepage).</a></li>
+	<li><a href="{{ url_for('hashtag_form')}}">Go to hashtag input form to learn more about a confusing hashtag.</a></li>
+	<li><a href="{{ url_for('see_all_hashtags_and_users')}}">View all the confusing hashtags and users.</a></li>
+	<li><a href="{{ url_for('see_all_for_one_confuser_form')}}">View all the confusing hashtags for a given user.</a></li>
+	<li><a href="{{ url_for('name_form')}}">Go to the Name input form.</a></li>
+	<li><a href="{{ url_for('all_names')}}">View all names added so far.</a></li>
+
+
+{% for message in get_flashed_messages() %}
+    <strong>{{ message }}</strong>
+{% endfor %}

@@ -1,0 +1,14 @@
+{%extends 'base.html' %}
+{%block content%}
+<html>
+<body>
+
+<form action="http://localhost:5000/find_hashtags_for_confuser" method="GET">
+  Confusing user to search for:<br>
+  <input type="text" name="user" value="">
+  <br><br>
+  <input type="submit" value="Submit">
+</form> 
+  {%endblock%}
+</body>
+</html>

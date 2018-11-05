@@ -1,0 +1,11 @@
+{%extends 'base.html' %}
+{% block content %}
+{% if num_users %}There are <b>{{ num_users }}</b>{% else %}<b>0</b>{% endif %} users with confusing hashtags:<br>
+{% for info in all_h_u %}
+The confusing hashtag, <b>{{ info[0] }}</b>, was used by
+<b>{{ info[1] }}</b> <br>
+
+{% endfor %}
+{% if not all_h_u %} There are no saved confusing hashtags at the moment. {% endif %}
+{% for message in get_flashed_messages() %} *** {{ message }} *** {% endfor %}
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+<form method="POST" action = "http://localhost:5000/hashtag_form">
+	<p>{{form.hashtag.label}}{{form.hashtag()}}</p>
+	<p>{{form.user.label}}{{form.user()}}</p>
+	{{ form.submit()}}{{ form.hidden_tag() }}
+</form>
+{% endblock %}
+{% for message in get_flashed_messages() %}
+<strong>{{ message }}</strong>
+{%endfor%}

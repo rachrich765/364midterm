@@ -1,0 +1,9 @@
+{%extends 'base.html' %}
+{% block content %}
+All of <b>{{user}}'s</b> confusing hashtags are:<br>
+{% for h in user_hashtags %}
+<b> {{h}} </b><br>
+
+{% endfor %}
+{% for message in get_flashed_messages() %} *** {{ message }} *** {% endfor %}
+{% endblock %}
