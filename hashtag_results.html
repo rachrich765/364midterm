@@ -1,3 +1,5 @@
+{%extends 'base.html'%}
+{%block content%}
 The definitions for your hashtag, <b>{{hashtag}}</b>, are (in order):
 <br>
 {% for n in objects %}
@@ -5,3 +7,4 @@ The definitions for your hashtag, <b>{{hashtag}}</b>, are (in order):
  <b>{{n['def']['text']}}</b>
  <br>
 {% endfor %}
+{%endblock%}
